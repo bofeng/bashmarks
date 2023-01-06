@@ -1,30 +1,32 @@
 ### Bashmarks is a shell script that allows you to save and jump to commonly used directories. Now supports tab completion.
 
+Credits: this is a fork from the original repo: [huyng/bashmarks](https://github.com/huyng/bashmarks), the main change is changing the s,g,p,d,l command to st,gt,pt,dt,lt.
+
 ## Install
 
-1. git clone git://github.com/huyng/bashmarks.git
+1. git clone https://github.com/bofeng/bashmarks.git
 2. cd bashmarks
 3. make install
-4. source **~/.local/bin/bashmarks.sh** from within your **~.bash\_profile** or **~/.bashrc** file
+4. source **~/.local/bin/bashmarks.sh** from within your **~.bash_profile** or **~/.bashrc** or **~/.zshrc** (if using zsh) file
 
 ## Shell Commands
 
-    s <bookmark_name> - Saves the current directory as "bookmark_name"
-    g <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"
-    p <bookmark_name> - Prints the directory associated with "bookmark_name"
-    d <bookmark_name> - Deletes the bookmark
-    l                 - Lists all available bookmarks
-    
+    st <bookmark_name> - Saves the current directory as "bookmark_name"
+    gt <bookmark_name> - Goes (cd) to the directory associated with "bookmark_name"
+    pt <bookmark_name> - Prints the directory associated with "bookmark_name"
+    dt <bookmark_name> - Deletes the bookmark
+    lt                 - Lists all available bookmarks
+
 ## Example Usage
 
     $ cd /var/www/
-    $ s webfolder
+    $ st webfolder
     $ cd /usr/local/lib/
-    $ s locallib
-    $ l
-    $ g web<tab>
-    $ g webfolder
+    $ st locallib
+    $ lt
+    $ gt web<tab>
+    $ gt webfolder
 
 ## Where Bashmarks are stored
-    
+
 All of your directory bookmarks are saved in a file called ".sdirs" in your HOME directory.
